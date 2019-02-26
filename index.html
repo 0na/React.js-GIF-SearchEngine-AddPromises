@@ -10,6 +10,10 @@
 <body>
     <div id="app">
     </div>
+    <script type="text/javascript" src="node_modules/babel-polyfill/dist/polyfill.js"></script>
+    <script type="text/javascript" src="node_modules/babel-polyfill/dist/polyfill.min.js">
+        //czy to jest postrzebne??
+    </script>
     <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
     <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
@@ -17,6 +21,7 @@
     <script>
         var App, Search, Gif ////komponenty definiujemy globalnie, ponieważ nie możemy importować modułów pomiędzy sobą
     </script>
+
     <script type="text/babel" src="components/Search.jsx"></script>
     <script type="text/babel" src="components/Gif.jsx"></script>
     <script type="text/babel" src="components/App.jsx"></script>
