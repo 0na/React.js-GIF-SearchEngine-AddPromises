@@ -1,0 +1,27 @@
+{
+  "name": "node.js-npm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0na/node.js-npm.git"
+  },
+  "author": "aleksandra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0na/node.js-npm/issues"
+  },
+  "homepage": "https://github.com/0na/node.js-npm#readme",
+  "dependencies": {
+    "colors": "^1.3.3"
+  },
+  "description": "",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "http-server": "^0.11.1"
+  }
+}
