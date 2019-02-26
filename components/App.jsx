@@ -37,11 +37,9 @@ App = React.createClass({
 
   getGif: function(searchingText) {
     return new Promise((resolve, reject) => {
-      //albo var promise = new Promise ??????
-      //a na koncu return promise ??
       var url =
         GIPHY_API_URL +
-        "/v1/gifs/random?api_key=" +
+        "gifs/random?api_key=" +
         GIPHY_PUB_KEY +
         "&tag=" +
         searchingText;
@@ -55,14 +53,11 @@ App = React.createClass({
             url: data.fixed_width_downsampled_url,
             sourceUrl: data.url
           };
-          resolve(gif); //zamiast callback(gif). jako drugi parametr metody getGif.
-        }
+          resolve(gif);
+        } else reject(); //czy to jest w dobrym miejscu ??
       };
       xhr.send();
     });
-
-    // else return reject ???
-    //   return promise;
   },
 
   //http://www.algosmart.pl/obietnice-powtorka-przed-reactjs-5/
@@ -76,8 +71,8 @@ App = React.createClass({
         gif: gif,
         searchingText: searchingText
       });
-      //   }.bind(this)
     });
+    //   }.bind(this)
   },
 
   // handleSearch: function(searchingText) {
